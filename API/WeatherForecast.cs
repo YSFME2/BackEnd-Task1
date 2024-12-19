@@ -1,4 +1,4 @@
-namespace BackEnd_Task1
+namespace API
 {
     public class WeatherForecast
     {
