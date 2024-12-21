@@ -40,7 +40,7 @@ namespace Application.Features.RevenueReports.Queries.GetTotals
                 .Select(x => new RevenueByServiceDto
                 {
                     ServiceName = x.Key,
-                    Revenue = x.SelectMany(y=>y.Booking.Transactions).Select(y => y.Amount).Sum()
+                    Revenue = x.SelectMany(y => y.Booking.Transactions).Select(y => y.Amount).Sum()
                 }).ToListAsync();
 
             totalRevenues.RevenueByBranches = await query
@@ -48,6 +48,14 @@ namespace Application.Features.RevenueReports.Queries.GetTotals
                 .Select(x => new RevenueByBranchDto
                 {
                     BranchName = x.Key,
+                    Revenue = x.SelectMany(y => y.Booking.Transactions).Select(y => y.Amount).Sum()
+                }).ToListAsync();
+
+            totalRevenues.RevenueByClients = await query
+                .GroupBy(x => x.Booking.Client)
+                .Select(x => new RevenueByClientDto
+                {
+                    ClientName = x.Key.FirstName + " " + x.Key.LastName,
                     Revenue = x.SelectMany(y => y.Booking.Transactions).Select(y => y.Amount).Sum()
                 }).ToListAsync();
 

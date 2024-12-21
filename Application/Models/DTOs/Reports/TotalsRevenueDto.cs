@@ -11,6 +11,7 @@ namespace Application.Models.DTOs.Reports
         public decimal TotalRevenue { get; set; }
         public List<RevenueByServiceDto> RevenueByServices { get; set; }
         public List<RevenueByBranchDto> RevenueByBranches { get; set; }
+        public List<RevenueByClientDto> RevenueByClients { get; set; }
         public List<RevenueByPaymentMethodDto> RevenueByPaymentMethods { get; set; }
     }
 }
