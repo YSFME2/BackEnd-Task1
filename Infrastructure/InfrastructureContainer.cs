@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
+using Infrastructure.Persistence.Seeding;
 
 namespace Infrastructure
 {
@@ -29,6 +30,8 @@ namespace Infrastructure
                     //dbContext.Database.EnsureCreated();
                     if (dbContext.Database.GetPendingMigrations().Count() > 0)
                         dbContext.Database.Migrate();
+
+                    SeedingData.SeedingDummyData(dbContext);
                 }
             }
 
