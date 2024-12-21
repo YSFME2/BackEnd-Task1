@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Infrastructure.Persistance
+namespace Infrastructure.Persistence
 {
     public class AppDbContext : DbContext, IAppDbContext
     {

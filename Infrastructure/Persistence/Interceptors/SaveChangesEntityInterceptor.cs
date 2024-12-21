@@ -1,6 +1,6 @@
 ﻿using Application.Abstractions;
 using Domain.Common;
-using Infrastructure.Persistance;
+using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Diagnostics;
