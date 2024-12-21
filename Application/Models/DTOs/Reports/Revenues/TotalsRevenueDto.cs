@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Models.DTOs.Reports
+namespace Application.Models.DTOs.Reports.Revenues
 {
     public class TotalsRevenueDto
     {

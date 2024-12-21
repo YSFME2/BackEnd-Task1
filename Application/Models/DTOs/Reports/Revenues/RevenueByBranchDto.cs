@@ -1,4 +1,4 @@
-﻿namespace Application.Models.DTOs.Reports
+﻿namespace Application.Models.DTOs.Reports.Revenues
 {
     public record RevenueByBranchDto
     {

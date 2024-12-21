@@ -1,4 +1,5 @@
 ﻿using Application.Abstractions;
+using Application.Models.DTOs.Reports.Revenues;
 using Domain.Extentions;
 using Microsoft.EntityFrameworkCore;
 using System;
