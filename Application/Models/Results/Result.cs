@@ -8,7 +8,7 @@ namespace Application.Models.Results
 {
     public class Result
     {
-        public bool IsSuccessed { get; set; }
+        public bool IsSucceeded { get; set; }
         public string? Error { get; set; }
     }
 

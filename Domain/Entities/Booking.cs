@@ -19,5 +19,6 @@ namespace Domain.Entities
 
 
         public virtual ICollection<BookingService> BookingServices { get; set; }
+        public virtual ICollection<Transaction> Transactions { get; set; }
     }
 }
