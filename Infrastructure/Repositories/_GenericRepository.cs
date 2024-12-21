@@ -24,13 +24,18 @@ namespace Infrastructure.Repositories
             return await _dbSet.ToListAsync();
         }
 
-        public async Task<IEnumerable<TEntity>> GetFilteredAsync<TFilter>(Expression<Func<TEntity, bool>> filter, params Expression<Func<TEntity, object>>[] includes)
+        public async Task<IEnumerable<TEntity>> GetFilteredAsync(Expression<Func<TEntity, bool>> filter, params Expression<Func<TEntity, object>>[] includes)
         {
             var iQuerable = _dbSet.Where(filter);
             foreach (var include in includes)
                 iQuerable = iQuerable.Include(include);
 
             return await _dbSet.ToListAsync();
+        }
+
+        public IQueryable<TEntity> GetQuerable()
+        {
+            return _dbSet.AsQueryable();
         }
     }
 }
